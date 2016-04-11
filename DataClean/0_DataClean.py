@@ -22,8 +22,8 @@ def transformTimeStampToDate():
 
 #将处理过的数据保存在OutputFile中
 def saveToFile():
-    songs.to_csv('../Data/OutputFile/0_songs.csv')
-    actions.to_csv('../Data/OutputFile/0_actions.csv')
+    songs.to_csv('../Data/OutputFile/0_songs.csv',index=False)
+    actions.to_csv('../Data/OutputFile/0_actions.csv',index=False)
 
 
 if __name__ == '__main__':
