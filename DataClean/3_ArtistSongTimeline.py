@@ -4,7 +4,7 @@ from datetime import datetime
 from Util import DataCleanUtil
 
 #读取数据
-file = pd.read_csv('../Data/OutputFile/0_songs.csv')
+file = pd.read_csv('../Data/OutputFile/0_1_songs.csv')
 
 #选取对应的列
 frame = file[['artist_id','song_id','publish_time']]

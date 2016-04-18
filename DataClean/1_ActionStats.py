@@ -6,7 +6,7 @@ from datetime import datetime
 from Util import DataCleanUtil
 
 #读文件
-file = pd.read_csv('../Data/OutputFile/0_actions.csv')
+file = pd.read_csv('../Data/OutputFile/0_1_actions.csv')
 date = DataCleanUtil.datetimeColumnsGenerate('2015-03-01','2015-08-30')
 result = {}
 
@@ -47,6 +47,7 @@ def actionStats():
     count.to_csv('../Data/OutputFile/1_action_stats.csv',na_rep='0;0;0')
 
 if __name__=='__main__':
+    #这三种每次只能执行一种，连续执行会报错……
     # file = createTypeCount(file,1)
     # save(file,1)
     # file = createTypeCount(file,2)

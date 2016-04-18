@@ -23,5 +23,22 @@ def addtwodimdict(thedict, key_a, key_b, val):
     else:
         thedict.update({key_a:{key_b: val}})
 
+def id_transfer(type,filepath):
+    """
+    type='song_id','artist_id','user_id'
+    filepath
+    :return dict{song/artist/user:number} number from 0 to len(song/artist/user)
+    """
+    file = pd.read_csv(filepath)
+    column = file[type]
+    column_number = enumerate(column.unique())
+    dict = {}
+    for number,type in column_number:
+        dict[type] = number
+    return dict
+
 #print timeStampToDate(1460038474)
 # print datetimeColumnsGenerate('2015-03-01','2015-03-03')
+# dict = id_transfer('song_id','../Data/OutputFile/0_songs.csv')
+# print dict
+# print len(dict)
