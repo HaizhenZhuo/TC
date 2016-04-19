@@ -19,4 +19,4 @@ for i,group in tmp:
         DataCleanUtil.addtwodimdict(result,d,i,val[i])
 
 sum = pd.DataFrame(result)
-sum.to_csv('../Data/OutputFile/1_1_artist_play_count',na_rep='null')
+sum.to_csv('../Data/OutputFile/1_1_artist_play_count.csv',na_rep='null')
