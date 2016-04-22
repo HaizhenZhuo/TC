@@ -36,6 +36,7 @@ def save(file,type):
 
 #统计3种action的操作数目
 def actionStats():
+    print file
     tmp = file.groupby(['song_id','gmt_create_date'])
     for (k1,k2),group in tmp:
         play = group[group['action_type']==1]['action_type'].count()
@@ -48,8 +49,8 @@ def actionStats():
 
 if __name__=='__main__':
     #这三种每次只能执行一种，连续执行会报错……
-    # file = createTypeCount(file,1)
-    # save(file,1)
+    file = createTypeCount(file,1)
+    save(file,1)
     # file = createTypeCount(file,2)
     # save(file,2)
     # file = createTypeCount(file,3)
