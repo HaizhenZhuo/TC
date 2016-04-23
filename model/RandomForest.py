@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn import cross_validation
 from sklearn.metrics import classification_report
 
-def GBDT(X,Y):
+def RF(X,Y):
     #本次变量选取太多,需要跑一段时间,如果想要运行简略版可以考虑使用前10个变量ß
     (data, target) = (X, Y)
     X_tr, X_tt, y_tr, y_tt = cross_validation.train_test_split(data, target, test_size = 0.3, random_state = 0)
